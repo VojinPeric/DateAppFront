@@ -24,7 +24,21 @@ export class SpinPageComponent {
 
   private tmpName: string = "";
 
+  private preloadedImages: HTMLImageElement[] = [];
+
   constructor() {
+    for (let i = 0; i < 12; i++) {
+      const img = new Image();
+      img.src = "/animationCardPng/state" + i + ".png";
+      this.preloadedImages.push(img);
+    }
+    
+    for (let i = 0; i < 7; i++) {
+      const img = new Image();
+      img.src = "/animationCardPng/finalState" + i + ".png";
+      this.preloadedImages.push(img);
+    }
+
     this.auth.getActiveDate().subscribe(response => {
       if (response) {
         this.activeDate = response.name;
@@ -87,7 +101,7 @@ export class SpinPageComponent {
     }
     console.log(this.countSpin + " " + this.countNumber)
     this.srcForPng = "/animationCardPng/state" + this.countNumber + ".png";
-    setTimeout(() => {this.cascade();}, 2000);
+    setTimeout(() => {this.cascade();}, 100);
   }
 
 }
