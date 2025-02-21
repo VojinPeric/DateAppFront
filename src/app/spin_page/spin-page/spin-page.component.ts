@@ -87,7 +87,7 @@ export class SpinPageComponent {
     }
     console.log(this.countSpin + " " + this.countNumber)
     this.srcForPng = "/animationCardPng/state" + this.countNumber + ".png";
-    setTimeout(() => {this.cascade();}, 100);
+    setTimeout(() => {this.cascade();}, 2000);
   }
 
 }
