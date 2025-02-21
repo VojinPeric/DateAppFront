@@ -1,0 +1,31 @@
+<app-nav-bar [active]="'presets'"></app-nav-bar>
+
+<div class="container-fluid">
+    <div class="row content text-center">
+        <div class="col-sm-12">
+            <h1>Active Preset</h1>
+            <p [innerText]="this.activePreset"></p>
+        </div>
+    </div>
+    <hr>
+    <div class="row content">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <input type="username" class="form-control" placeholder="Enter preset name" [(ngModel)]="this.newPreset">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-padd" (click)="makePreset()">Make</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div *ngFor="let preset of this.arrOfPresets; index as i">
+        <div class="row content">
+            <div class="col-sm-12">
+                <app-preset-element [idPreset]="preset.id" [name]="preset.name" [checked]="this.checked" (emitChange)="onOptionChange($event)"></app-preset-element>
+            </div>
+        </div>
+    </div>
+</div>

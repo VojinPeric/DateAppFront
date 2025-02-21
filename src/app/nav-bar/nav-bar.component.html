@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Logo</span>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a [ngClass]="{ 'active': this.active == 'spin' }" class="nav-link" href="spin_page">Spin</a></li>
+                <li class="nav-item"><a [ngClass]="{ 'active': this.active == 'pool' }" class="nav-link" href="pool_page">Pool</a></li>
+                <li class="nav-item"><a [ngClass]="{ 'active': this.active == 'presets' }" class="nav-link" href="presets_page">Presets</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a class="nav-link no_highlight" [innerText]="this.username"></a></li>
+                <li class="nav-item"><a  class="nav-link" (click)="logout()" href="login_register_page">Log out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,10 @@
+<div class="inline-container">
+    <input class="set-text-size form-control" type="text" [placeholder]="this.text" readonly>
+
+    <input type="radio" class="btn-check" [name]="this.idDateStr" [id]="this.idDateStrY" value="Yes" autocomplete="off" [(ngModel)]="this.checked" (change)="onOptionChange($event)">
+    <label class="btn btn-outline-success" [for]="this.idDateStrY">Y</label>
+    
+    <input type="radio" class="btn-check" [name]="this.idDateStr" [id]="this.idDateStrN" value="No" autocomplete="off" [(ngModel)]="this.checked" (change)="onOptionChange($event)">
+    <label class="btn btn-outline-danger" [for]="this.idDateStrN">N</label>
+</div>
+

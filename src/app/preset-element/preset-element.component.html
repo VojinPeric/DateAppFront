@@ -1,0 +1,6 @@
+<div class="inline-container">
+    <input class="set-text-size form-control" type="text" [placeholder]="this.name" readonly>
+
+    <input type="radio" class="btn-check" name="options-outlined" [id]="this.idPresetStr" [value]="this.idPresetStr" [(ngModel)]="this.checked" autocomplete="off" (change)="onOptionChangePreset($event)">
+    <label class="btn btn-outline-success" [for]="this.idPresetStr">Select</label>
+</div>

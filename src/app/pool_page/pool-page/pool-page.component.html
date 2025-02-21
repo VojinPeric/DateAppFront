@@ -1,0 +1,25 @@
+<app-nav-bar [active]="'pool'"></app-nav-bar>
+
+<div class="container-fluid">
+    <br>
+    <div class="row content">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <input type="username" class="form-control" id="dateAddField" placeholder="Enter new date" [(ngModel)]="this.makeField">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-padd" (click)="addDateLocal()">Add</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div *ngFor="let date of this.arrOfDates">
+        <div class="row content">
+            <div class="col-sm-12">
+                <app-date-element [text]="date.name" [idDate]="date.id" [isChecked]="date.isChecked"></app-date-element>
+            </div>
+        </div>
+    </div>
+</div>

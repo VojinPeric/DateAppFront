@@ -1,0 +1,11 @@
+.set-text-size {
+    width: 300px;
+}
+
+.inline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
